@@ -1,0 +1,105 @@
+name: 🐞 Bug report
+description: Report a bug in Tachiyomi.
+labels: "bug"
+title: [Bug] Write a short description here
+body:
+
+- type: markdown
+  attributes:
+    value: Thanks for taking the time to report a Tachiyomi bug! Fill out the form below to provide us with info to help fix the bug.
+
+- type: checkboxes
+  attributes:
+    label: Acknowledgements
+    description: Note that the issue will be automatically closed if you do not fill out the title or requested information.
+    options:
+      - label: I have updated to the latest version of the app. **v0.11.1**
+        required: true
+      - label: I have updated all extensions.
+        required: true
+      - label: I have read the troubleshooting guide: https://tachiyomi.org/help/guides/troubleshooting-problems/
+        required: true
+      - label: If this is an issue with an extension, that I should be opening an issue in https://github.com/tachiyomiorg/tachiyomi-extensions
+        required: true
+      - label: I have searched the existing issues and this is new ticket **NOT** a duplicate or related to another open issue
+        required: true
+      - label: I will fully fill out the title and the information in this template.
+        required: true
+
+- type: dropdown
+  attributes:
+    label: Type of bug
+    description: What type of bug is this? Choose all that apply.
+    multiple: true
+    options:
+      - Performance issue
+      - Crashing
+      - Feature not working
+      - Other unexpected behaviour
+  validations:
+    required: true
+
+- type: input
+  attributes:
+    label: Tachyiomi version
+    description: You can find your Tachiyomi version in **More → About**.
+    placeholder: |
+      Example: "0.11.1"
+  validations:
+    required: true
+
+- type: input
+  attributes:
+    label: Android version
+    description: You can find your Android version in your devices **Settings**.
+    placeholder: |
+      Example: "Android 11"
+  validations:
+    required: true
+
+- type: input
+  attributes:
+    label: Device
+    description: List your device and model.
+    placeholder: |
+      Example: "Google Pixel 5 XL"
+  validations:
+    required: true
+
+- type: textarea
+  attributes:
+    label: Steps to reproduce
+    description: Provide an example of how to trigger the bug.
+    placeholder: |
+      Example:
+      1. First step
+      2. Second step
+      3. Bug occurs
+  validations:
+    required: true
+
+- type: textarea
+  attributes:
+    label: Expected behaviour
+    description: Explain what you should expect to happen.
+    placeholder: |
+      Example: "This should happen."
+  validations:
+    required: true
+
+- type: textarea
+  attributes:
+    label: Actual behaviour
+    description: Explain what actually happens.
+    placeholder: |
+      Example: "This happened instead."
+  validations:
+    required: true
+
+- type: markdown
+  attributes:
+    label: Other details
+    value: |
+      Additional details and attachments.
+      
+      If you're experiencing crashes, share the crash logs from **More → Settings → Advanced** then press **Dump crash logs**.
